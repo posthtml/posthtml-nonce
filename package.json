@@ -1,6 +1,6 @@
 {
   "name": "posthtml-nonce",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A posthtml plugin for add nanoid to style & script links",
   "license": "MIT",
   "repository": "gitscrum/posthtml-nonce",
