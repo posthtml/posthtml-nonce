@@ -21,12 +21,12 @@ npm i -S posthtml posthtml-nonce
 ```js
 import {readFileSync, writeFileSync} from 'fs';
 import posthtml from 'posthtml';
-import posthtmlCache from 'posthtml-nonce';
+import posthtmlNonce from 'posthtml-nonce';
 
 const html = readFileSync('input.html', 'utf8');
 
 posthtml()
-    .use(posthtmlCache(/* options */))
+    .use(posthtmlNonce({tags: ['links'], nonce: '4f90d13a42'}))
     .process(html)
     .then(result => {
         writeFileSync('output.html', result.html);
@@ -55,24 +55,25 @@ output.html
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="style.css?v=4f90d13a42">
+    <link rel="stylesheet" href="style.css" nonce="4f90d13a42">
   </head>
   <body>
-    <img data-src="logo.svg?v=VlLqCweTvn_E1g3XXGMtM" alt="">
-    <script src="script.js?v=93ce_Ltuub"></script>
+    <img data-src="logo.svg" alt="">
+    <script src="script.js"></script>
   </body>
 <html>
 ```
-> *will be added nanoid to all the file link*
+> *will be added nonce attribute with nanoid*
 
 ## Options
 
 ### `tags`
-Type: `Array`  
-Default: `['script', 'link']`  
+Type: `Array`(***required***)   
+Default: `[]`  
 Description: *You can also expand the list by adding the tags you need...*  
 
-### `attributes`
-Type: `Array`  
-Default: `['src', 'href']`  
-Description: *You can also expand the list by adding the attributes you need...*  
+### `nanoid`
+Type: `String`(***required***)   
+Default: ``  
+Description: *nanoid*  
+
