@@ -3,9 +3,9 @@
   "version": "0.2.0",
   "description": "A posthtml plugin for add nanoid to style & script links",
   "license": "MIT",
-  "repository": "Scrum/posthtml-nonce",
-  "homepage": "Scrum/posthtml-nonce/#readme",
-  "bugs": "Scrum/posthtml-nonce/issues",
+  "repository": "posthtml/posthtml-nonce",
+  "homepage": "posthtml/posthtml-nonce/#readme",
+  "bugs": "posthtml/posthtml-nonce/issues",
   "author": {
     "name": "Ivan Demidov",
     "email": "Scrum@list.ru",
