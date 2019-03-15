@@ -14,7 +14,7 @@ The HTTP [`Content-Security-Policy`](https://developer.mozilla.org/en-US/docs/We
 npm i -S posthtml posthtml-nonce
 ```
 
-> **Note:** This project is compatible with node v4+
+> **Note:** This project is compatible with node v6+
 
 ## Usage
 
@@ -76,4 +76,3 @@ Description: *You can also expand the list by adding the tags you need...*
 Type: `String`(***required***)   
 Default: ``  
 Description: *nanoid*  
-

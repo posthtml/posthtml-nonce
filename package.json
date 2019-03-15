@@ -13,7 +13,7 @@
   },
   "main": "lib/index.js",
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "scripts": {
     "version": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"build: update changelog\"",
@@ -91,7 +91,7 @@
         "@babel/preset-env",
         {
           "targets": {
-            "node": 4
+            "node": 6
           }
         }
       ],
@@ -140,12 +140,8 @@
       "*.{html,jpg}"
     ],
     "rules": {
-      "pkg-main": [
-        "off"
-      ],
-      "xo": [
-        "off"
-      ]
+      "pkg-main": "off",
+      "xo": "off"
     }
   }
 }
