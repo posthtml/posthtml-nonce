@@ -16,7 +16,8 @@ test('plugin must be function', t => {
 });
 
 test('should return reject', async t => {
-    await t.throws(plugin({tags: '', nonce: '123'})());
+    const error = await t.throwsAsync(plugin({tags: '', nonce: '123'})());
+    t.is(error.message, 'tags must be Array');
 });
 
 test('should return promise', t => {
